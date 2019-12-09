@@ -1,0 +1,6 @@
+<div class="piano-key-wrap">
+  <div class="piano-key wkey" v-for="note in Notes" :key="note.keyCode" :data-keyCode = "note.keyCode" v-if="note.type=='white'" @click="clickPianoKey($event, note.keyCode)"></div>
+  <div class="bkey-wrap bkey-wrap1">
+    <div class="piano-key bkey" v-for="note in Notes" :key="note.keyCode" :data-keyCode = "note.keyCode" v-if="note.type=='black' && note.id >= 36 && note.id <= 40" @click="clickPianoKey($event, note.keyCode)"></div>
+  </div>
+</div>
